@@ -50,7 +50,7 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyA1Txy47_jpv4_6ftGPnKlGFV3EN7JQd_E',
+    apiKey: "YOUR_API_KEY_HERE",
     appId: '1:1069314122947:web:71123fd6a1d3af2e95ee76',
     messagingSenderId: '1069314122947',
     projectId: 'biasguard-2026',
