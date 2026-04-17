@@ -1,0 +1,182 @@
+student_name,roll_number,district,school_board,stream,marks_percent,decision
+Rahul Kumar Sharma,10234,Patna,CBSE,Science,88.5,Approved
+Sunita Devi Paswan,82341,Sitamarhi,BSEB,Arts,76.2,Rejected
+Aman Gupta,10567,Patna,CBSE,Commerce,91.0,Approved
+Priya Kumari Musahar,84012,Sheohar,BSEB,Arts,71.4,Rejected
+Vikash Singh,10891,Danapur,CBSE,Science,85.3,Approved
+Kavita Devi Dusadh,83456,Supaul,BSEB,Arts,74.8,Rejected
+Arjun Tiwari,10345,Patna,ICSE,Commerce,92.1,Approved
+Geeta Kumari Ram,85023,Araria,BSEB,Arts,70.5,Rejected
+Rohit Verma,11234,Muzaffarpur,CBSE,Science,83.7,Approved
+Mamta Kumari Majhi,84567,Madhepura,BSEB,Science,78.9,Rejected
+Aditya Pandey,10678,Patna,CBSE,Science,89.2,Approved
+Rekha Devi Harijan,86012,Kishanganj,BSEB,Arts,72.3,Rejected
+Shivam Mishra,10234,Patna,CBSE,Commerce,87.4,Approved
+Pushpa Kumari Chamar,83789,Supaul,BSEB,Science,75.6,Rejected
+Ankit Kumar Thakur,11567,Hajipur,CBSE,Science,84.1,Approved
+Laxmi Devi Pasi,85234,Khagaria,BSEB,Arts,69.8,Rejected
+Deepak Sharma,10890,Patna,ICSE,Commerce,90.5,Approved
+Renu Kumari Dhobi,82901,Sheohar,BSEB,Arts,73.2,Rejected
+Saurabh Gupta,11023,Muzaffarpur,CBSE,Science,86.7,Approved
+Sarita Kumari Das,84345,Madhepura,BSEB,Science,77.4,Rejected
+Nitin Dubey,10456,Patna,CBSE,Science,88.9,Approved
+Meena Kumari Valmiki,83123,Sitamarhi,BSEB,Arts,70.1,Rejected
+Harsh Jha,11789,Darbhanga,CBSE,Commerce,85.2,Approved
+Puja Devi Ravidas,86456,Araria,BSEB,Arts,68.7,Rejected
+Suraj Kumar Singh,10234,Hajipur,CBSE,Science,91.3,Approved
+Anita Kumari Munda,85678,Supaul,BSEB,Science,79.3,Rejected
+Mohit Shukla,10567,Patna,ICSE,Science,92.4,Approved
+Champa Devi Kharwar,84901,Kishanganj,BSEB,Arts,71.8,Rejected
+Tushar Srivastava,11234,Muzaffarpur,CBSE,Commerce,87.6,Approved
+Saroj Kumari Santali,83234,Madhepura,BSEB,Arts,74.1,Rejected
+Abhishek Tripathi,10678,Patna,CBSE,Science,89.8,Approved
+Kiran Devi Balmiki,85567,Khagaria,BSEB,Arts,67.9,Rejected
+Pallav Pathak,11901,Patna,CBSE,Science,83.5,Approved
+Sunaina Kumari Bind,84123,Sitamarhi,BSEB,Science,76.8,Rejected
+Gaurav Upadhyay,10234,Danapur,ICSE,Commerce,86.2,Approved
+Nirmala Devi Yadav,83890,Supaul,BSEB,Arts,72.5,Rejected
+Rahul Chaturvedi,11456,Muzaffarpur,CBSE,Science,88.1,Approved
+Babita Kumari Mandal,85012,Araria,BSEB,Arts,69.3,Rejected
+Rajan Dwivedi,10123,Patna,CBSE,Science,90.7,Approved
+Reena Kumari Oraon,84678,Sheohar,BSEB,Science,77.2,Rejected
+Kartik Pandey,11789,Patna,CBSE,Commerce,87.9,Approved
+Urmila Devi Nishad,83345,Madhepura,BSEB,Arts,71.6,Rejected
+Akash Sharma,10456,Hajipur,ICSE,Science,91.8,Approved
+Durga Devi Patel,85890,Kishanganj,BSEB,Arts,70.4,Rejected
+Vivek Mishra,11023,Patna,CBSE,Science,85.6,Approved
+Sulochana Devi Koiri,82567,Supaul,BSEB,Science,76.1,Rejected
+Aakash Singh,11234,Muzaffarpur,CBSE,Commerce,88.3,Approved
+Malti Devi Mallah,84234,Madhepura,BSEB,Arts,68.5,Rejected
+Siddharth Tiwari,10678,Patna,CBSE,Science,92.6,Approved
+Pooja Kumari Kushwaha,83567,Sitamarhi,BSEB,Arts,73.9,Rejected
+Rohan Gupta,10901,Patna,ICSE,Commerce,89.4,Approved
+Seema Devi Rajbhar,85123,Khagaria,BSEB,Science,75.7,Rejected
+Nikhil Verma,11345,Muzaffarpur,CBSE,Science,86.4,Approved
+Madhu Kumari Ram,84456,Araria,BSEB,Arts,67.2,Rejected
+Arun Kumar Thakur,10123,Hajipur,CBSE,Science,83.9,Approved
+Pushpa Kumari Dusadh,82789,Sheohar,BSEB,Arts,74.5,Rejected
+Sachin Pandey,11567,Patna,CBSE,Commerce,87.2,Approved
+Geeta Devi Majhi,83012,Supaul,BSEB,Science,78.3,Rejected
+Manish Dubey,10234,Danapur,ICSE,Science,90.1,Approved
+Kamla Devi Harijan,85345,Kishanganj,BSEB,Arts,69.7,Rejected
+Priyanka Sharma,10800,Patna,CBSE,Science,85.0,Approved
+Ranjit Kumar Yadav,21456,Bhagalpur,BSEB,Science,80.2,Approved
+Amrita Devi Paswan,84890,Madhepura,BSEB,Arts,72.8,Rejected
+Sanjay Tiwari,11678,Muzaffarpur,CBSE,Commerce,88.7,Approved
+Savitri Kumari Chamar,83123,Sitamarhi,BSEB,Science,75.3,Rejected
+Lalit Mishra,10234,Patna,CBSE,Science,91.5,Approved
+Parvati Devi Musahar,85678,Araria,BSEB,Arts,68.1,Rejected
+Vinod Shukla,11901,Patna,ICSE,Commerce,86.9,Approved
+Usha Devi Bhumij,84012,Sheohar,BSEB,Science,77.6,Rejected
+Rajesh Kumar Singh,10456,Hajipur,CBSE,Science,89.0,Approved
+Chameli Devi Pasi,82345,Supaul,BSEB,Arts,70.9,Rejected
+Deepak Jha,11234,Darbhanga,CBSE,Commerce,87.3,Approved
+Saira Begum Ansari,84567,Kishanganj,BSEB,Arts,73.4,Rejected
+Sanjeev Srivastava,10678,Patna,CBSE,Science,90.8,Approved
+Phoolamani Devi Das,83890,Madhepura,BSEB,Arts,71.2,Rejected
+Ketan Tripathi,11023,Muzaffarpur,ICSE,Science,88.5,Approved
+Rukmini Devi Valmiki,85123,Khagaria,BSEB,Science,76.4,Rejected
+Pawan Pathak,10145,Patna,CBSE,Commerce,86.1,Approved
+Gita Devi Korwa,84456,Sitamarhi,BSEB,Arts,67.8,Rejected
+Shubham Chaturvedi,11456,Hajipur,CBSE,Science,91.2,Approved
+Kamini Kumari Rajput,83678,Supaul,BSEB,Science,78.0,Rejected
+Deepanshu Pandey,10789,Patna,CBSE,Commerce,87.8,Approved
+Savita Devi Nishad,85901,Araria,BSEB,Arts,69.1,Rejected
+Anurag Dwivedi,11234,Danapur,ICSE,Science,89.7,Approved
+Rajkumari Devi Sahni,84123,Madhepura,BSEB,Science,75.9,Rejected
+Keshav Gupta,10234,Patna,CBSE,Commerce,92.0,Approved
+Meenakshi Devi Kewat,83345,Sheohar,BSEB,Arts,70.6,Rejected
+Ashish Sharma,11567,Muzaffarpur,CBSE,Science,85.8,Approved
+Prabha Devi Bind,85234,Kishanganj,BSEB,Arts,68.3,Rejected
+Vikram Verma,10890,Patna,ICSE,Commerce,87.1,Approved
+Shobha Devi Lohar,82567,Supaul,BSEB,Science,76.7,Rejected
+Saurabh Tiwari,11789,Patna,CBSE,Science,90.3,Approved
+Karuna Devi Ho,84789,Araria,BSEB,Arts,72.1,Rejected
+Neeraj Mishra,10012,Hajipur,CBSE,Commerce,88.4,Approved
+Saraswati Devi Chamar,83012,Madhepura,BSEB,Science,77.8,Rejected
+Ritesh Singh,11345,Patna,CBSE,Science,91.9,Approved
+Kamla Devi Gond,85456,Khagaria,BSEB,Arts,67.4,Rejected
+Tanmay Pandey,10678,Danapur,ICSE,Science,86.5,Approved
+Dropadi Devi Musahar,84234,Sitamarhi,BSEB,Arts,71.5,Rejected
+Abhijit Dubey,11901,Muzaffarpur,CBSE,Commerce,89.1,Approved
+Rohini Devi Kharwar,82890,Sheohar,BSEB,Science,75.2,Rejected
+Amitabh Jha,10234,Patna,CBSE,Science,90.6,Approved
+Sunni Devi Paswan,85678,Kishanganj,BSEB,Arts,69.5,Rejected
+Suresh Kumar Yadav,21789,Bhagalpur,BSEB,Science,82.4,Approved
+Mani Devi Dusadh,84012,Araria,BSEB,Arts,68.9,Rejected
+Prabhat Srivastava,10456,Patna,ICSE,Commerce,87.5,Approved
+Sultana Begum Khan,83456,Madhepura,BSEB,Arts,74.3,Rejected
+Sumit Tripathi,11234,Hajipur,CBSE,Science,88.8,Approved
+Basanti Devi Ravidas,85234,Supaul,BSEB,Science,76.5,Rejected
+Vivek Shukla,10789,Patna,CBSE,Commerce,90.2,Approved
+Rucha Devi Santali,84567,Khagaria,BSEB,Arts,67.6,Rejected
+Piyush Pathak,11456,Muzaffarpur,CBSE,Science,85.4,Approved
+Champa Kumari Mallah,83789,Sitamarhi,BSEB,Science,78.6,Rejected
+Kunal Gupta,10123,Patna,ICSE,Commerce,91.4,Approved
+Ganga Devi Oraon,85012,Araria,BSEB,Arts,69.9,Rejected
+Mayank Tiwari,11567,Danapur,CBSE,Science,86.8,Approved
+Lalita Devi Munda,84345,Sheohar,BSEB,Science,77.1,Rejected
+Himanshu Mishra,10890,Patna,CBSE,Commerce,88.2,Approved
+Sarita Devi Parha,82123,Madhepura,BSEB,Arts,70.3,Rejected
+Ankur Sharma,11789,Muzaffarpur,CBSE,Science,90.9,Approved
+Kabri Devi Birhor,85890,Kishanganj,BSEB,Arts,67.0,Rejected
+Shashank Singh,10234,Hajipur,ICSE,Commerce,87.7,Approved
+Prafulla Devi Das,84123,Supaul,BSEB,Science,75.4,Rejected
+Gaurav Pandey,11023,Patna,CBSE,Science,91.6,Approved
+Nagmani Devi Dhobi,83456,Khagaria,BSEB,Arts,68.6,Rejected
+Raj Dubey,10567,Patna,CBSE,Commerce,87.0,Approved
+Jamuna Devi Pasi,85678,Araria,BSEB,Arts,71.0,Rejected
+Sarvesh Jha,11234,Darbhanga,CBSE,Science,89.5,Approved
+Renuka Devi Bind,84234,Sitamarhi,BSEB,Science,76.3,Rejected
+Prashant Srivastava,10678,Patna,ICSE,Commerce,91.1,Approved
+Sushila Devi Valmiki,82789,Sheohar,BSEB,Arts,69.2,Rejected
+Aashish Tripathi,11901,Muzaffarpur,CBSE,Science,86.3,Approved
+Bimlesh Devi Kurmi,83123,Madhepura,BSEB,Science,77.5,Rejected
+Vinay Chaturvedi,10234,Patna,CBSE,Commerce,90.4,Approved
+Sona Devi Kahar,85345,Kishanganj,BSEB,Arts,68.0,Rejected
+Siddharth Pathak,11456,Hajipur,CBSE,Science,88.6,Approved
+Indira Devi Majhi,84567,Supaul,BSEB,Science,75.0,Rejected
+Amar Kumar Tiwari,10789,Danapur,ICSE,Commerce,87.4,Approved
+Laxmibai Devi Harijan,82012,Araria,BSEB,Arts,67.5,Rejected
+Devendra Gupta,11234,Patna,CBSE,Science,92.3,Approved
+Bhagwati Devi Ram,85567,Khagaria,BSEB,Arts,70.8,Rejected
+Rohit Mishra,10456,Muzaffarpur,CBSE,Commerce,85.1,Approved
+Bindiya Devi Chamar,83890,Sitamarhi,BSEB,Science,76.9,Rejected
+Sachin Sharma,11789,Patna,CBSE,Science,91.7,Approved
+Meera Kumari Nishad,84789,Madhepura,BSEB,Arts,69.4,Rejected
+Harsh Dubey,10123,Patna,ICSE,Commerce,86.6,Approved
+Phoolmati Devi Musahar,85012,Sheohar,BSEB,Arts,68.4,Rejected
+Rishi Singh,11345,Hajipur,CBSE,Science,89.3,Approved
+Annapurna Devi Ho,83234,Kishanganj,BSEB,Science,77.3,Rejected
+Nikhil Tiwari,10678,Patna,CBSE,Commerce,88.0,Approved
+Resham Devi Dusadh,82456,Araria,BSEB,Arts,70.2,Rejected
+Apurv Pandey,11901,Danapur,CBSE,Science,90.0,Approved
+Kamlesh Devi Kharwar,84123,Supaul,BSEB,Science,75.8,Rejected
+Yash Mishra,10234,Patna,ICSE,Commerce,87.9,Approved
+Ratna Devi Gond,85234,Khagaria,BSEB,Arts,67.3,Rejected
+Shyam Jha,11456,Muzaffarpur,CBSE,Science,91.0,Approved
+Prabha Devi Santali,83456,Sitamarhi,BSEB,Arts,73.7,Rejected
+Utsav Srivastava,10789,Patna,CBSE,Commerce,86.0,Approved
+Kamla Devi Sahni,84345,Madhepura,BSEB,Science,76.0,Rejected
+Anurag Tripathi,11234,Hajipur,ICSE,Science,89.6,Approved
+Sunitha Devi Balmiki,82678,Araria,BSEB,Arts,68.7,Rejected
+Manav Chaturvedi,10456,Patna,CBSE,Commerce,92.2,Approved
+Purnima Devi Rajbhar,85678,Kishanganj,BSEB,Arts,67.1,Rejected
+Raunak Gupta,11789,Muzaffarpur,CBSE,Science,88.9,Approved
+Gomati Devi Korwa,83901,Sheohar,BSEB,Science,75.6,Rejected
+Arnav Sharma,10123,Patna,CBSE,Commerce,91.8,Approved
+Kantamani Devi Birhor,85123,Supaul,BSEB,Arts,69.6,Rejected
+Pankaj Mishra,11567,Patna,ICSE,Science,86.2,Approved
+Sarvanti Devi Lohar,84456,Madhepura,BSEB,Science,78.2,Rejected
+Aditya Tiwari,10890,Hajipur,CBSE,Commerce,87.6,Approved
+Basanta Devi Oraon,82234,Khagaria,BSEB,Arts,70.0,Rejected
+Varun Pandey,11234,Patna,CBSE,Science,90.5,Approved
+Subhadra Devi Munda,85345,Araria,BSEB,Science,76.8,Rejected
+Swayam Dubey,10678,Danapur,CBSE,Commerce,88.3,Approved
+Kanta Devi Chamar,83567,Sitamarhi,BSEB,Arts,68.2,Rejected
+Abhishek Jha,11901,Muzaffarpur,ICSE,Science,91.3,Approved
+Lalita Devi Kevat,84890,Sheohar,BSEB,Arts,72.6,Rejected
+Gaurav Srivastava,10234,Patna,CBSE,Commerce,89.9,Approved
+Sona Devi Majhi,82012,Kidnapperlganj,BSEB,Arts,67.7,Rejected
+Shashwat Shukla,11456,Patna,CBSE,Science,92.5,Approved
+Meera Devi Das,85567,Madhepura,BSEB,Science,75.1,Rejected

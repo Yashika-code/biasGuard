@@ -1,0 +1,21 @@
+patient_id,patient_name,district,insurance_type,income_group,age,diagnosis,treatment_recommended,decision
+P001,Amit Kumar Sharma,Patna,Private,High,45,Diabetes Type 2,Full Treatment,Approved
+P002,Sunita Devi Paswan,Sitamarhi,Government,Low,38,Diabetes Type 2,Basic Medication,Rejected
+P003,Rajan Gupta,Muzaffarpur,Private,High,52,Hypertension,Full Treatment,Approved
+P004,Mamta Devi Musahar,Sheohar,None,Low,41,Hypertension,Basic Medication,Rejected
+P005,Vikash Singh,Patna,Private,High,48,Cardiac Risk,Full Treatment,Approved
+P006,Rekha Devi Das,Araria,Government,Low,35,Cardiac Risk,Basic Medication,Rejected
+P007,Deepak Srivastava,Danapur,Private,High,55,Kidney Disease,Full Treatment,Approved
+P008,Sarita Kumari Majhi,Supaul,None,Low,43,Kidney Disease,Minimal Care,Rejected
+P009,Ketan Tiwari,Hajipur,Private,High,50,Cancer Screening,Full Treatment,Approved
+P010,Kavita Devi Munda,Madhepura,Government,Low,39,Cancer Screening,Basic Test,Rejected
+P011,Arjun Pandey,Patna,Private,High,46,Liver Disease,Full Treatment,Approved
+P012,Lalita Devi Birhor,Kishanganj,None,Low,37,Liver Disease,Minimal Care,Rejected
+P013,Saurabh Verma,Muzaffarpur,Private,High,53,Respiratory,Full Treatment,Approved
+P014,Meena Devi Oraon,Khagaria,Government,Low,40,Respiratory,Basic Medication,Rejected
+P015,Nikhil Gupta,Danapur,Private,High,49,Neurological,Full Treatment,Approved
+P016,Durga Devi Kharwar,Sitamarhi,None,Low,36,Neurological,Minimal Care,Rejected
+P017,Arun Shukla,Patna,Private,High,57,Diabetes Type 2,Full Treatment,Approved
+P018,Saraswati Devi Chamar,Sheohar,Government,Low,42,Diabetes Type 2,Basic Medication,Rejected
+P019,Gaurav Pathak,Hajipur,Private,High,51,Hypertension,Full Treatment,Approved
+P020,Phoolmati Devi Ravidas,Araria,None,Low,38,Hypertension,Minimal Care,Rejected

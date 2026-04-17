@@ -1,0 +1,121 @@
+name: BiasGuard CI — Cloud Functions Tests
+
+on:
+  push:
+    branches: [ main, master, feature/**, polish/** ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test-cloud-functions:
+    name: Python Tests (Cloud Functions)
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('functions/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas numpy scikit-learn pytest pytest-cov
+          # Install test-only mocks (no firebase needed for unit tests)
+          pip install google-cloud-firestore google-cloud-storage
+
+      - name: Run unit tests
+        run: |
+          cd functions
+          python -m pytest tests/ -v \
+            --ignore=tests/test_csv_parser.py \
+            --tb=short \
+            --cov=helpers \
+            --cov-report=term-missing \
+            --cov-fail-under=55
+        env:
+          PYTHONPATH: .
+
+      - name: Run CSV parser tests (with mocks)
+        run: |
+          cd functions
+          python -m pytest tests/test_csv_parser.py -v --tb=short
+        env:
+          PYTHONPATH: .
+
+      - name: Test import health check
+        run: |
+          cd functions
+          python -c "
+          from helpers.fairness_metrics import run_full_metrics, compute_equity_score
+          from helpers.proxy_detection import infer_caste_from_name, classify_school_board
+          from helpers.mitigation import run_mitigation
+          from helpers.anonymizer import anonymise_dataframe
+          from helpers.validator import validate_cf1_request, validate_cf4_request, is_prompt_safe
+          print('All imports successful')
+          "
+        env:
+          PYTHONPATH: .
+
+  lint-python:
+    name: Python Lint Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install flake8
+        run: pip install flake8
+      - name: Lint Cloud Functions
+        run: |
+          flake8 functions/ \
+            --max-line-length=110 \
+            --ignore=E501,W503,W504,E302,E303,E241,E127,E305 \
+            --exclude=functions/__pycache__,functions/.venv,functions/tests
+
+  validate-demo-csvs:
+    name: Validate Demo Datasets
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install pandas
+        run: pip install pandas
+      - name: Validate all demo CSVs
+        run: |
+          python -c "
+          import pandas as pd, glob, sys
+
+          csvs = glob.glob('assets/demo/*.csv')
+          print(f'Found {len(csvs)} demo CSV files')
+
+          errors = []
+          for path in csvs:
+              try:
+                  df = pd.read_csv(path)
+                  assert len(df) > 0, f'{path}: Empty CSV'
+                  assert 'decision' in [c.lower() for c in df.columns], \
+                      f'{path}: Missing decision column'
+                  print(f'  ✅ {path}: {len(df)} rows, {len(df.columns)} columns')
+              except Exception as e:
+                  errors.append(f'{path}: {e}')
+
+          if errors:
+              print('ERRORS:')
+              for e in errors: print(f'  ❌ {e}')
+              sys.exit(1)
+          print(f'All {len(csvs)} demo CSVs valid.')
+          "

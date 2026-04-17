@@ -1,0 +1,5 @@
+[run]
+omit =
+    helpers/caching.py
+    helpers/firestore_writer.py
+    helpers/gemini_client.py

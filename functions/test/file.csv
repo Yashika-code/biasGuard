@@ -1,0 +1,6 @@
+name,gender,caste,income,decision
+Amit,Male,General,50000,Approved
+Riya,Female,OBC,30000,Rejected
+Rahul,Male,SC,20000,Approved
+Sneha,Female,ST,15000,Approved
+Vikas,Male,OBC,25000,Rejected

@@ -1,0 +1,51 @@
+application_id,applicant_name,district,annual_income,loan_amount,employment_type,credit_score,collateral,gender,decision
+L001,Amit Kumar Sharma,Patna,850000,500000,Salaried,720,Yes,Male,Approved
+L002,Sunita Devi Paswan,Sitamarhi,120000,200000,Self-Employed,580,No,Female,Rejected
+L003,Rajan Gupta,Muzaffarpur,920000,800000,Salaried,760,Yes,Male,Approved
+L004,Mamta Kumari Das,Sheohar,95000,150000,Daily-Wage,540,No,Female,Rejected
+L005,Vikash Singh,Patna,780000,600000,Salaried,710,Yes,Male,Approved
+L006,Renuka Devi Musahar,Araria,85000,100000,Daily-Wage,510,No,Female,Rejected
+L007,Deepak Srivastava,Patna,1100000,1000000,Salaried,790,Yes,Male,Approved
+L008,Sarita Kumari Majhi,Supaul,110000,180000,Self-Employed,560,No,Female,Rejected
+L009,Rohan Tiwari,Hajipur,690000,450000,Salaried,740,Yes,Male,Approved
+L010,Kavita Devi Munda,Madhepura,75000,120000,Daily-Wage,490,No,Female,Rejected
+L011,Saurabh Pandey,Danapur,820000,700000,Salaried,755,Yes,Male,Approved
+L012,Purnima Devi Ravidas,Khagaria,90000,160000,Self-Employed,530,No,Female,Rejected
+L013,Nikhil Verma,Patna,960000,900000,Salaried,800,Yes,Male,Approved
+L014,Champa Kumari Dhobi,Kishanganj,80000,130000,Daily-Wage,505,No,Female,Rejected
+L015,Arun Shukla,Hajipur,750000,550000,Salaried,730,Yes,Male,Approved
+L016,Savita Devi Valmiki,Sitamarhi,100000,175000,Self-Employed,545,No,Female,Rejected
+L017,Manish Mishra,Patna,1050000,950000,Salaried,785,Yes,Male,Approved
+L018,Asha Devi Balmiki,Sheohar,70000,110000,Daily-Wage,488,No,Female,Rejected
+L019,Ketan Pathak,Muzaffarpur,870000,750000,Salaried,768,Yes,Male,Approved
+L020,Lalita Devi Dom,Araria,88000,145000,Daily-Wage,512,No,Female,Rejected
+L021,Arjun Rajput,Patna,800000,650000,Salaried,742,Yes,Male,Approved
+L022,Phoolmati Devi Kharwar,Supaul,92000,155000,Self-Employed,535,No,Female,Rejected
+L023,Vivek Dubey,Danapur,730000,500000,Salaried,718,Yes,Male,Approved
+L024,Savanti Devi Chamar,Madhepura,78000,125000,Daily-Wage,498,No,Female,Rejected
+L025,Pankaj Chaturvedi,Patna,990000,880000,Salaried,776,Yes,Male,Approved
+L026,Bindu Devi Lohar,Khagaria,83000,140000,Daily-Wage,518,No,Female,Rejected
+L027,Shashank Jha,Muzaffarpur,840000,720000,Salaried,752,Yes,Male,Approved
+L028,Meena Devi Parha,Kishanganj,68000,105000,Daily-Wage,480,No,Female,Rejected
+L029,Tanmay Dwivedi,Patna,910000,820000,Salaried,772,Yes,Male,Approved
+L030,Saroj Devi Sansi,Sitamarhi,94000,158000,Self-Employed,528,No,Female,Rejected
+L031,Rahul Agarwal,Hajipur,1200000,1100000,Salaried,820,Yes,Male,Approved
+L032,Pushpa Kumari Nat,Sheohar,72000,115000,Daily-Wage,492,No,Female,Rejected
+L033,Sumit Bansal,Patna,950000,870000,Salaried,782,Yes,Male,Approved
+L034,Renu Devi Khatik,Araria,87000,148000,Daily-Wage,508,No,Female,Rejected
+L035,Gaurav Kapoor,Muzaffarpur,760000,580000,Salaried,722,Yes,Male,Approved
+L036,Sulochana Devi Bawaria,Supaul,76000,122000,Daily-Wage,495,No,Female,Rejected
+L037,Ashish Khanna,Patna,1080000,980000,Salaried,788,Yes,Male,Approved
+L038,Geeta Devi Dharkar,Madhepura,91000,152000,Self-Employed,522,No,Female,Rejected
+L039,Rajesh Mehta,Danapur,880000,760000,Salaried,758,Yes,Male,Approved
+L040,Kamini Devi Meghwal,Khagaria,82000,138000,Daily-Wage,516,No,Female,Rejected
+L041,Siddharth Arora,Patna,1020000,920000,Salaried,792,Yes,Male,Approved
+L042,Durga Devi Mahar,Kishanganj,78000,128000,Daily-Wage,500,No,Female,Rejected
+L043,Abhishek Bhatia,Hajipur,810000,670000,Salaried,746,Yes,Male,Approved
+L044,Usha Devi Mang,Sitamarhi,96000,162000,Self-Employed,540,No,Female,Rejected
+L045,Varun Singh,Patna,970000,890000,Salaried,778,Yes,Male,Approved
+L046,Kamla Devi Chambhar,Sheohar,74000,118000,Daily-Wage,490,No,Female,Rejected
+L047,Neeraj Gupta,Muzaffarpur,720000,520000,Salaried,712,Yes,Male,Approved
+L048,Sunaina Devi Matang,Araria,84000,142000,Daily-Wage,514,No,Female,Rejected
+L049,Piyush Mishra,Patna,1150000,1050000,Salaried,810,Yes,Male,Approved
+L050,Rucha Devi Turha,Supaul,79000,132000,Daily-Wage,502,No,Female,Rejected

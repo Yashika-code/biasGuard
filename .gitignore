@@ -1,0 +1,56 @@
+biasguard/build/
+biasguard/.dart_tool/
+biasguard/.flutter-plugins
+biasguard/.flutter-plugins-dependencies
+biasguard/android/.gradle/
+biasguard/android/key.properties
+biasguard/ios/Pods/
+biasguard/ios/.symlinks/
+biasguard/macos/Pods/
+biasguard/.packages
+biasguard/pubspec.lock
+
+# Firebase sensitive files
+google-services.json
+GoogleService-Info.plist
+biasguard/lib/core/config/firebase_options.dart
+.env
+*.env
+.env.local
+functions/.env
+
+# Cloud Functions
+functions/__pycache__/
+functions/helpers/__pycache__/
+functions/.python-version
+functions/venv/
+functions/.venv/
+*.pyc
+*.pyo
+
+# Firebase
+.firebase/
+.firebaserc
+firebase-debug.log
+firebase-debug.*.log
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Internal Development & Testing
+testsprite_tests/
+biasguard_app/testsprite_tests/
+testsprite-mcp-test-report.md
+tmp/
+*.log
+
+# Keys & secrets
+*.key
+*.pem
+*.p12
+service-account*.json

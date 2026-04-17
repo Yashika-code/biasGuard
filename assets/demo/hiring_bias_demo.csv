@@ -1,0 +1,41 @@
+candidate_id,candidate_name,state,university_type,degree,experience_years,english_score,technical_score,resume_gap_months,decision
+H001,Rahul Sharma,Maharashtra,IIT/NIT,BTech,3,92,88,0,Selected
+H002,Sunita Devi Paswan,Bihar,State University,BA,1,65,58,8,Rejected
+H003,Amit Gupta,Delhi,IIT/NIT,MTech,5,95,92,0,Selected
+H004,Radha Kumari Majhi,Jharkhand,State University,BSc,2,60,55,12,Rejected
+H005,Vikash Singh,Punjab,IIT/NIT,BTech,4,88,85,0,Selected
+H006,Priya Kumari Das,Odisha,State University,BCA,1,62,52,6,Rejected
+H007,Ketan Tiwari,Gujarat,IIT/NIT,MBA,6,94,91,0,Selected
+H008,Meena Devi Munda,Chhattisgarh,State University,BA,0,58,48,18,Rejected
+H009,Arjun Pandey,Karnataka,IIT/NIT,BTech,3,90,87,0,Selected
+H010,Sarita Kumari Oraon,Jharkhand,State University,BSc,1,61,53,10,Rejected
+H011,Deepak Mishra,Rajasthan,IIT/NIT,MTech,5,93,90,0,Selected
+H012,Parvati Devi Chamar,UP,State University,BA,0,56,46,24,Rejected
+H013,Rohan Jha,West Bengal,IIT/NIT,BTech,4,87,84,0,Selected
+H014,Kavita Devi Valmiki,Bihar,State University,BCA,1,64,54,9,Rejected
+H015,Saurabh Verma,Maharashtra,IIT/NIT,MBA,7,96,93,0,Selected
+H016,Lalita Devi Birhor,Jharkhand,State University,BA,0,57,47,15,Rejected
+H017,Nikhil Gupta,Delhi,IIT/NIT,BTech,3,91,88,0,Selected
+H018,Sunita Devi Musahar,Bihar,State University,BSc,1,63,51,7,Rejected
+H019,Arun Srivastava,Gujarat,IIT/NIT,MTech,6,95,92,0,Selected
+H020,Kamini Devi Gond,Chhattisgarh,State University,BA,0,59,49,20,Rejected
+H021,Gaurav Pathak,Karnataka,IIT/NIT,BTech,4,89,86,0,Selected
+H022,Rekha Devi Ravidas,UP,State University,BCA,1,62,50,11,Rejected
+H023,Shashank Rai,Punjab,IIT/NIT,MBA,5,93,90,0,Selected
+H024,Pushpa Devi Kharwar,Jharkhand,State University,BSc,0,60,48,16,Rejected
+H025,Ankur Singh,West Bengal,IIT/NIT,BTech,3,88,85,0,Selected
+H026,Mamta Kumari Dom,Bihar,State University,BA,1,64,52,8,Rejected
+H027,Abhijit Dubey,Maharashtra,IIT/NIT,MTech,6,94,91,0,Selected
+H028,Geeta Devi Nat,UP,State University,BA,0,55,45,22,Rejected
+H029,Yash Chaturvedi,Delhi,IIT/NIT,BTech,4,90,87,0,Selected
+H030,Phoolmati Devi Pasi,Bihar,State University,BCA,1,63,53,9,Rejected
+H031,Rishi Dwivedi,Gujarat,IIT/NIT,MBA,7,96,93,0,Selected
+H032,Saroj Kumari Bhangi,UP,State University,BSc,0,58,46,19,Rejected
+H033,Sumit Tripathi,Karnataka,IIT/NIT,BTech,3,89,86,0,Selected
+H034,Basanti Devi Khatik,Bihar,State University,BA,1,62,51,10,Rejected
+H035,Manish Pandey,Rajasthan,IIT/NIT,MTech,5,92,89,0,Selected
+H036,Sushila Devi Mahar,Maharashtra,State University,BSc,2,68,62,4,Rejected
+H037,Pranav Shukla,West Bengal,IIT/NIT,BTech,4,90,87,0,Selected
+H038,Rucha Devi Lohar,Odisha,State University,BA,0,57,47,14,Rejected
+H039,Kartik Mishra,Punjab,IIT/NIT,MBA,6,95,92,0,Selected
+H040,Nirmala Devi Sansi,Chhattisgarh,State University,BCA,1,61,50,12,Rejected
