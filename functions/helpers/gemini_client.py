@@ -222,3 +222,4 @@ def get_direct_fair_decision(scenario: str) -> Dict[str, Any]:
             "explanation_hi": "AI सिस्टम अभी उपलब्ध नहीं है। कृपया केवल योग्यता-आधारित मानदंडों का उपयोग करके इस आवेदन की मैन्युअल समीक्षा करें।",
             "fairness_note": "All decisions should be based solely on merit and relevant qualifications.",
         }
+      
