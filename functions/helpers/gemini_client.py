@@ -66,7 +66,9 @@ def _call_gemini(prompt: str, system_instruction: str) -> Dict[str, Any]:
             time.sleep(_RETRY_DELAY * (2 ** attempt))
 
     logger.error(f"All Gemini retries failed: {last_error}")
-    raise ValueError(f"Gemini call failed after {_MAX_RETRIES} retries: {last_error}")
+    raise ValueError(
+        f"Gemini call failed after {_MAX_RETRIES} retries: {last_error}"
+    )
 
 
 # ─── Prompt 1: Bias Analysis ──────────────────────────────────────────────────
@@ -96,9 +98,14 @@ Return ONLY this JSON:
 }}"""
 
 
-def analyse_bias(use_case: str, columns_list: list, group_stats: dict,
-                  overall_rate: float, demographic_parity: float,
-                  equity_score: int) -> Dict[str, Any]:
+def analyse_bias(
+    use_case: str,
+    columns_list: list,
+    group_stats: dict,
+    overall_rate: float,
+    demographic_parity: float,
+    equity_score: int,
+) -> Dict[str, Any]:
     """Call Gemini for bias explanation and root cause analysis."""
     prompt = BIAS_ANALYSIS_TEMPLATE.format(
         use_case=use_case,
@@ -115,9 +122,17 @@ def analyse_bias(use_case: str, columns_list: list, group_stats: dict,
         return _fallback_bias_analysis(equity_score, demographic_parity)
 
 
-def _fallback_bias_analysis(equity_score: int, dp: float) -> Dict[str, Any]:
+def _fallback_bias_analysis(
+    equity_score: int,
+    dp: float
+) -> Dict[str, Any]:
     """Pre-written fallback if Gemini is unavailable."""
-    severity = "critical" if dp > 0.3 else "high" if dp > 0.15 else "medium" if dp > 0.05 else "low"
+    severity = (
+        "critical" if dp > 0.3
+        else "high" if dp > 0.15
+        else "medium" if dp > 0.05
+        else "low"
+    )
     return {
         "explanation_en": (
             f"The AI system shows a {round(dp * 100, 1)}% disparity in approval rates across groups, "
@@ -130,8 +145,12 @@ def _fallback_bias_analysis(equity_score: int, dp: float) -> Dict[str, Any]:
         ),
         "root_causes": ["Unequal approval rates across demographic groups"],
         "proxy_features": [],
-        "mitigation_suggestion": "Apply group reweighting to equalise approval rates across all demographic groups.",
-        "counterfactual_hint": "Changing the group attribute may significantly alter the decision outcome.",
+        "mitigation_suggestion": (
+            "Apply group reweighting to equalise approval rates across all demographic groups."
+        ),
+        "counterfactual_hint": (
+            "Changing the group attribute may significantly alter the decision outcome."
+        ),
         "severity": severity,
         "india_specific_flags": [],
     }
@@ -146,12 +165,6 @@ datasets can serve as proxies for protected attributes. Respond ONLY with valid 
 PROXY_DETECTION_TEMPLATE = """Analyse these column names and sample values from an Indian dataset:
 {columns_and_samples}
 
-For each column, identify if it could act as an indirect proxy for:
-- caste/social group: via surnames, district names, school names, roll number patterns
-- region: rural vs urban via pin codes, district codes, school boards
-- ses (socio-economic status): via school type, medium of instruction, bank branch
-- gender: via names, salutation patterns
-
 Return ONLY this JSON:
 {{
   "proxy_columns": [
@@ -165,10 +178,16 @@ Return ONLY this JSON:
 }}"""
 
 
-def detect_proxies_gemini(columns_and_samples: dict) -> Dict[str, Any]:
-    """Call Gemini for India-specific proxy detection on column samples."""
+def detect_proxies_gemini(
+    columns_and_samples: dict
+) -> Dict[str, Any]:
+    """Call Gemini for India-specific proxy detection."""
     prompt = PROXY_DETECTION_TEMPLATE.format(
-        columns_and_samples=json.dumps(columns_and_samples, ensure_ascii=False, default=str)
+        columns_and_samples=json.dumps(
+            columns_and_samples,
+            ensure_ascii=False,
+            default=str
+        )
     )
     try:
         return _call_gemini(prompt, PROXY_DETECTION_SYSTEM)
@@ -179,10 +198,8 @@ def detect_proxies_gemini(columns_and_samples: dict) -> Dict[str, Any]:
 
 # ─── Prompt 3: Direct Fair Decision ──────────────────────────────────────────
 
-DIRECT_DECISION_SYSTEM = """You are a fair decision assistant for BiasGuard. You make decisions
-based ONLY on merit and contextually relevant factors. You must EXPLICITLY IGNORE caste, surname,
-gender, religion, region, language, and any other protected attributes.
-Every decision must be transparent, explainable, and free of bias.
+DIRECT_DECISION_SYSTEM = """You are a fair decision assistant for BiasGuard.
+You must ignore caste, surname, gender, religion, region, language, and any protected attributes.
 Respond ONLY with valid JSON."""
 
 DIRECT_DECISION_TEMPLATE = """Make a fair recommendation for this scenario:
@@ -192,22 +209,22 @@ Respond ONLY with this JSON:
 {{
   "recommendation": "APPROVE|REJECT|REVIEW",
   "confidence": 0,
-  "factors_considered": ["list of merit-based factors you used"],
-  "factors_explicitly_ignored": ["list of bias-prone factors you ignored"],
-  "what_if": [
-    {{"change": "description of change", "new_recommendation": "APPROVE|REJECT|REVIEW", "reasoning": "why this changes the outcome"}},
-    {{"change": "description of change 2", "new_recommendation": "APPROVE|REJECT|REVIEW", "reasoning": "..."}},
-    {{"change": "description of change 3", "new_recommendation": "APPROVE|REJECT|REVIEW", "reasoning": "..."}}
-  ],
-  "explanation_en": "Clear explanation of the recommendation (2-3 sentences)",
+  "factors_considered": ["list of merit-based factors"],
+  "factors_explicitly_ignored": ["list of bias-prone factors"],
+  "what_if": [],
+  "explanation_en": "Clear explanation of the recommendation",
   "explanation_hi": "Same explanation in Hindi",
-  "fairness_note": "One sentence on how this decision upholds fairness principles"
+  "fairness_note": "How this decision upholds fairness"
 }}"""
 
 
-def get_direct_fair_decision(scenario: str) -> Dict[str, Any]:
-    """Call Gemini for a standalone fair decision in Direct Mode."""
-    prompt = DIRECT_DECISION_TEMPLATE.format(scenario=scenario)
+def get_direct_fair_decision(
+    scenario: str
+) -> Dict[str, Any]:
+    """Call Gemini for a standalone fair decision."""
+    prompt = DIRECT_DECISION_TEMPLATE.format(
+        scenario=scenario
+    )
     try:
         return _call_gemini(prompt, DIRECT_DECISION_SYSTEM)
     except Exception as e:
@@ -215,11 +232,22 @@ def get_direct_fair_decision(scenario: str) -> Dict[str, Any]:
         return {
             "recommendation": "REVIEW",
             "confidence": 50,
-            "factors_considered": ["Unable to complete AI analysis at this time"],
-            "factors_explicitly_ignored": ["All protected attributes (caste, gender, region, religion)"],
+            "factors_considered": [
+                "Unable to complete AI analysis at this time"
+            ],
+            "factors_explicitly_ignored": [
+                "All protected attributes"
+            ],
             "what_if": [],
-            "explanation_en": "The AI assistant is temporarily unavailable. Please review this application manually using only merit-based criteria.",
-            "explanation_hi": "AI सिस्टम अभी उपलब्ध नहीं है। कृपया केवल योग्यता-आधारित मानदंडों का उपयोग करके इस आवेदन की मैन्युअल समीक्षा करें।",
-            "fairness_note": "All decisions should be based solely on merit and relevant qualifications.",
+            "explanation_en": (
+                "The AI assistant is temporarily unavailable. "
+                "Please review manually using merit-based criteria."
+            ),
+            "explanation_hi": (
+                "AI सिस्टम अभी उपलब्ध नहीं है। "
+                "कृपया केवल योग्यता-आधारित मानदंडों का उपयोग करें।"
+            ),
+            "fairness_note": (
+                "All decisions should be based solely on merit."
+            ),
         }
-      
