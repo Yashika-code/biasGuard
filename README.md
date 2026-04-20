@@ -3,7 +3,7 @@
 **FairAI for Every Decision — Anywhere in the World**
 
 > Google Solution Challenge 2026 · Theme: Unbiased AI Decision Making
-> Build with AI · Hack2Skill x GDG India · Team from Patna, Bihar, India
+> Build with AI · Hack2Skill x GDG India · Team from India
 
 [![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)](https://firebase.google.com)
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white)](https://flutter.dev)
@@ -116,10 +116,10 @@ biasguard-solution-challenge-2026/
 
 ### Step 1: Clone & Firebase Login
 ```bash
-git clone https://github.com/YOUR_USERNAME/biasguard-solution-challenge-2026.git
-cd biasguard-solution-challenge-2026
+git clone https://github.com/Yashika-code/biasGuard.git
+cd biasGuard
 firebase login
-firebase use biasguard-2026
+firebase use biasguard
 ```
 
 ### Step 2: Set Gemini API Key
@@ -237,17 +237,6 @@ POST /getDirectFairDecision
 | **SDG 16** — Justice & Accountability | Makes AI decisions transparent and auditable |
 | **SDG 4** — Quality Education | Fairer scholarship and admission systems |
 | **SDG 8** — Decent Work | Unbiased hiring tools |
-
----
-
-## 👥 Team
-
-| Member | Role | Location |
-|--------|------|----------|
-| Member A | Flutter UI, Riverpod, Charts, PDF, Demo Video | Patna, Bihar |
-| Member B (You) | Firebase, Cloud Functions, Gemini, Fairness Metrics | Patna, Bihar |
-
-**Sprint:** 13–16 April 2026 | **Submission:** 24 April 2026
 
 ---
 
