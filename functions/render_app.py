@@ -58,6 +58,22 @@ def _handlers():
 app = Flask(__name__)
 
 
+@app.get("/")
+def index() -> tuple[dict, int]:
+    return {
+        "service": "BiasGuard backend",
+        "status": "running",
+        "message": "API is live. Use /health or the POST endpoints for analysis.",
+        "routes": [
+            "/health",
+            "/parseAndCalculateMetrics",
+            "/geminiAnalysisAndMitigation",
+            "/triggerMitigation",
+            "/getDirectFairDecision",
+        ],
+    }, 200
+
+
 @app.get("/health")
 def health() -> tuple[dict, int]:
     return {
