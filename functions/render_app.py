@@ -7,6 +7,7 @@ standard Flask web service on Render.
 
 import json
 import os
+from functools import lru_cache
 from pathlib import Path
 
 from flask import Flask, request
@@ -38,12 +39,21 @@ def _configure_google_credentials() -> None:
 
 _configure_google_credentials()
 
-from main import (  # noqa: E402
-    parseAndCalculateMetrics,
-    geminiAnalysisAndMitigation,
-    triggerMitigation,
-    getDirectFairDecision,
-)
+
+@lru_cache(maxsize=1)
+def _handlers():
+    from main import (  # noqa: E402
+        parseAndCalculateMetrics,
+        geminiAnalysisAndMitigation,
+        triggerMitigation,
+        getDirectFairDecision,
+    )
+    return (
+        parseAndCalculateMetrics,
+        geminiAnalysisAndMitigation,
+        triggerMitigation,
+        getDirectFairDecision,
+    )
 
 app = Flask(__name__)
 
@@ -58,21 +68,25 @@ def health() -> tuple[dict, int]:
 
 @app.post("/parseAndCalculateMetrics")
 def parse_and_calculate_metrics():
+    parseAndCalculateMetrics, _, _, _ = _handlers()
     return parseAndCalculateMetrics(request)
 
 
 @app.post("/geminiAnalysisAndMitigation")
 def gemini_analysis_and_mitigation():
+    _, geminiAnalysisAndMitigation, _, _ = _handlers()
     return geminiAnalysisAndMitigation(request)
 
 
 @app.post("/triggerMitigation")
 def trigger_mitigation():
+    _, _, triggerMitigation, _ = _handlers()
     return triggerMitigation(request)
 
 
 @app.post("/getDirectFairDecision")
 def get_direct_fair_decision():
+    _, _, _, getDirectFairDecision = _handlers()
     return getDirectFairDecision(request)
 
 
@@ -82,6 +96,7 @@ def get_direct_fair_decision():
 @app.route("/getDirectFairDecision", methods=["OPTIONS"])
 def options_routes():
     # Reuse existing CORS preflight handling in CF1.
+    parseAndCalculateMetrics, _, _, _ = _handlers()
     return parseAndCalculateMetrics(request)
 
 
