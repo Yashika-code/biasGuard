@@ -22,7 +22,6 @@ functions/.env
 # Cloud Functions
 functions/__pycache__/
 functions/helpers/__pycache__/
-functions/.python-version
 functions/venv/
 functions/.venv/
 *.pyc
