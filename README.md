@@ -150,6 +150,25 @@ flutter run -d chrome  # web
 flutter run            # Android/iOS
 ```
 
+### Step 6: Deploy Backend on Render (Alternative)
+
+This repo now includes `render.yaml` and a Render web entrypoint at
+`functions/render_app.py`.
+
+1. Push the repository to GitHub.
+2. In Render, create a **Blueprint** service from the repo (it will read `render.yaml`).
+3. Set these environment variables in Render:
+   - `GEMINI_API_KEY` (required)
+   - `FIREBASE_SERVICE_ACCOUNT_JSON` (required, full JSON content of service account)
+   - `FIREBASE_PROJECT_ID` (recommended, e.g. `biasguard-42ac2`)
+   - `FIREBASE_STORAGE_BUCKET` (optional override)
+4. Deploy and verify health:
+   - `GET /health` should return status `ok`
+
+Important:
+- Render automatically provides `PORT`; do not set `PORT` manually.
+- Keep service account JSON out of git. Use Render environment variables.
+
 ---
 
 ## 📊 Firestore Data Schema

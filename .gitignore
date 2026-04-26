@@ -54,3 +54,4 @@ tmp/
 *.pem
 *.p12
 service-account*.json
+*firebase-adminsdk*.json

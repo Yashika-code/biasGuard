@@ -4,6 +4,7 @@ All Firestore read/write helpers with structured paths matching Member A's schem
 """
 
 import logging
+import os
 from datetime import datetime, timezone
 from typing import Dict, Any, Optional
 
@@ -11,7 +12,8 @@ from google.cloud import firestore
 
 logger = logging.getLogger(__name__)
 
-db = firestore.Client(project="biasguard-42ac2")
+PROJECT_ID = os.environ.get("FIREBASE_PROJECT_ID", "biasguard-42ac2")
+db = firestore.Client(project=PROJECT_ID)
 
 
 # ─── Path helpers ─────────────────────────────────────────────────────────────
