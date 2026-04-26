@@ -11,13 +11,6 @@ from pathlib import Path
 
 from flask import Flask, request
 
-from main import (
-    parseAndCalculateMetrics,
-    geminiAnalysisAndMitigation,
-    triggerMitigation,
-    getDirectFairDecision,
-)
-
 
 def _configure_google_credentials() -> None:
     """
@@ -44,6 +37,13 @@ def _configure_google_credentials() -> None:
 
 
 _configure_google_credentials()
+
+from main import (  # noqa: E402
+    parseAndCalculateMetrics,
+    geminiAnalysisAndMitigation,
+    triggerMitigation,
+    getDirectFairDecision,
+)
 
 app = Flask(__name__)
 
