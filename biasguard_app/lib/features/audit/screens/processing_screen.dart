@@ -147,6 +147,12 @@ class _ProcessingScreenState extends State<ProcessingScreen>
     }
   }
 
+  String _getSeverity(int score) {
+    if (score >= 80) return 'LOW';
+    if (score >= 50) return 'MEDIUM';
+    return 'HIGH';
+  }
+
   void _handleError(String message) {
     if (!mounted) return;
     showDialog(

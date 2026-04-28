@@ -86,32 +86,26 @@ def detect_sensitive_columns(columns: List[str]) -> Dict[str, List[str]]:
     return found
 
 
-def detect_primary_group_column(df: pd.DataFrame, sensitive_map: Dict[str, List[str]],
-                                 outcome_col: str) -> Optional[str]:
-    """
-    Among detected sensitive columns, pick the one most likely to show bias.
-    Priority: caste > region > gender > income > school > others.
-    Falls back to the column with the highest group variance in approval rate.
-    """
-    priority_order = ["caste", "region", "gender", "income", "school"]
-    for category in priority_order:
-        if category in sensitive_map and sensitive_map[category]:
-            return sensitive_map[category][0]
+def detect_primary_group_column(df, sensitive_map, outcome_col):
 
-    # Fallback: try all low-cardinality string columns
-    string_cols = df.select_dtypes(include="object").columns.tolist()
-    candidates = [c for c in string_cols if c != outcome_col and df[c].nunique() <= 15]
+    preferred = ["caste", "school", "gender", "income", "region"]
 
-    best_col, best_var = None, -1.0
-    for col in candidates:
-        group_rates = df.groupby(col).apply(
-            lambda x: pd.to_numeric(x[outcome_col], errors="coerce").mean()
-        )
-        if group_rates.std() > best_var:
-            best_var = group_rates.std()
-            best_col = col
+    for category in preferred:
+        if category in sensitive_map:
+            for col in sensitive_map[category]:
+                uniq = df[col].nunique()
 
-    return best_col
+                # Avoid high-cardinality columns like district/name
+                if 2 <= uniq <= 8:
+                    return col
+
+    # fallback
+    for category in sensitive_map:
+        for col in sensitive_map[category]:
+            if 2 <= df[col].nunique() <= 10:
+                return col
+
+    return None
 
 
 def binarise_outcome(df: pd.DataFrame, outcome_col: str) -> pd.DataFrame:
